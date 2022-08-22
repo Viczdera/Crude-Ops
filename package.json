@@ -4,7 +4,7 @@
   "description": "api with basic CRUDE operations",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "dev-start": "nodemon index.js"
   },
   "author": "Victor Chidera",

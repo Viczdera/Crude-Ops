@@ -2,8 +2,19 @@ const router = require("express").Router();
 const User = require("../Models/Users");
 //const bcrypt = require("bcrypt");
 
-router.get("/", (req, res) => {
-  res.send("Welcome to the DB");
+router.get("/", async (req, res) => {
+    try {
+        const user = await User.find({});
+        res.status(200).json({
+          success: true,
+          data: user,
+        });
+      } catch {
+        return res.status(400).json({
+          success: false,
+          data: "Unable to get users",
+        });
+      }
 });
 
 //register user(POST)
