@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const User = require("../Models/Users");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 
 router.get("/", (req, res) => {
-  res.send("welcome to the DB");
+  res.send("Welcome to the DB");
 });
 
 //register user(POST)
