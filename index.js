@@ -20,6 +20,6 @@ app.use(express.json());
 app.use("/users",route_users)
 
 //run port
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log("Dera's server running");
 });
